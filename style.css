@@ -1,0 +1,287 @@
+body {
+
+    /* colcoar gradiente nas cores tambem temos  a cores de gradiente  uma imagem de fundo  */
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgb(20, 20, 20, 1)), url(img/dumbbells-floor-gym-ai-generative.jpg);
+    /* ajustar a imagem na tela */
+    background-position: center center;
+    /* redimensionei a imagem */
+    background-size: cover;
+    /* mexendo nos eixos da imagem */
+    background-position-y: 0px;
+
+    background-repeat: no-repeat;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* ZERANDO O CSS */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* FUNDO DA TELA */
+
+
+
+html {
+
+    /* pegar a tela toda */
+    width: 100vw;
+    /* pegar toda altura */
+    height: 150vh;
+
+    /* tamanho da fonte */
+    font-size: 62.5%;
+
+    /* cor da letra */
+    color: rgb(255, 255, 255);
+
+
+}
+
+
+/* MENU HEADER */
+
+
+header {
+
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(22, 22, 22, 0.2);
+}
+
+.menu-content {
+
+    /* transformar todas as letras me maisculas */
+    text-transform: uppercase;
+    /* vai ocupar todo o header */
+    height: 100%;
+
+    /* colocar ao lado */
+    display: flex;
+
+    /* distanciamento entre o logo  e os menus */
+    justify-content: space-around;
+
+    align-items: center;
+
+    font-size: 1.8rem;
+
+}
+
+.logo {
+    /* tamanho da fonte */
+    font-size: 1.8rem;
+    /* distanciamento entre as letras */
+    letter-spacing: 0.4rem;
+    /* muda o cursos do mouso ao passar na logo */
+    cursor: pointer;
+}
+
+/* chamando a claase */
+.menu-content .list-itens {
+
+    /* alinhar ao lado */
+    display: flex;
+    /* retirar a bolinha branca */
+    list-style: none;
+    /* distanciamento entre os menus */
+    gap: 20px;
+}
+
+
+
+.menu-content .list-itens img {
+    /* tamanho da imagem */
+    width: 45px;
+}
+
+.menu-content .list-itens a {
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+    /* a forma que excrevemos pode influenciar no codigo  exemplo PX, REM, OU OUTRA FORMA */
+
+    padding: 10px;
+
+    /* COLOCAR EFEITO DEBAIXO DAS LETRAS */
+    /* ms sao milisegundo */
+    transform: 2ms ease-in;
+
+    position: relative;
+
+}
+
+/* vamos fazer o efeito embaixo das letra */
+.menu-content .list-itens a:before {
+    content: '';
+    position: absolute;
+    /* da onde o efeito ira começar */
+    bottom: 0;
+    /* da onde o efeito ira começar */
+    left: 0;
+
+    width: 0;
+    /* tamanho do traço */
+    height: 1px;
+
+    /* cor da linha  */
+
+    background-color: rgb(251, 255, 0);
+    /* duração do efeito */
+    transition: all 1.5s ease;
+
+
+}
+
+
+  /* para  fazer o efeito aconteçer */
+.menu-content .list-itens a:hover:before {
+   
+width: 100%;
+
+}
+
+
+/* centro conteudo */
+
+
+
+main{
+
+   /* VH SERIA O TAMANHO DA TELA PRINCIPAL */
+   
+   
+    height: 730px ;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+}
+
+
+.main-content{
+
+
+    display: flex;
+    
+     /* seria coluna para deixar um em cima do outro */
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+/* muudar os textos */
+
+ .primeriotexto{
+
+    width: 900px;
+    font-size: 50px;
+    /* distancia do que esta embaixo do texto */
+
+    margin-bottom:20px ;
+
+    text-align: center;
+
+    
+
+}
+
+
+.segundotexto{
+
+    margin-bottom: 20px;
+font-size: 20px;
+color: rgb(165,165,165);
+text-transform: uppercase;
+
+}
+
+
+/* botoes */
+
+.btns{
+
+display: flex;
+justify-content: center;
+gap: 30px;
+
+}
+
+/* MEXENDO NO BUTTON */
+.btns button{
+
+    width: 250px;
+    height:60PX ;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    /* deixar as caixas transparente */
+    text-transform: uppercase;
+    
+    /* transparencia */
+    background: transparent;
+
+   
+   /* letra mais cheia */
+    font-weight: bold;
+/* ESPAÇO ENTRE AS LETRAS NA CAIXA */
+    letter-spacing: 2px;
+/* ARRENDONDAR A BORDA DA CAIXA */
+    border-radius:20px ;
+/* efeitos */
+    position: relative;
+
+    /* efetios */
+
+    transition: 1.5s;
+}
+
+
+
+.btns button:hover{
+    color: rgb(251,255,0);
+    border: none;
+}
+
+/* sempre que tem algunm efeito tem que ter o before  */
+.btns button:before{
+
+/* sempre tem que ter o content: ''; */
+    content: '';
+   /* smepre similar ao de cima border-radius: ; */
+    border-radius: 20px;
+   
+   bottom: 0;
+    /* da onde começa  a animação */
+
+    left: 0;
+
+    position: absolute;
+/* nao tem largura so ao passar o mouse */
+    width: 0;
+height: 60px;
+
+background-color: rgb(61,61,61);
+ /* para o efeito nao ficar em cima do texto */
+z-index: -1;
+
+transition: 1s;
+
+}
+
+
+.btns button:hover:before{
+
+   width: 100%;
+    }
+
+   
